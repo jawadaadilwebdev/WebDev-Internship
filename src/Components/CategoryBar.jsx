@@ -1,5 +1,8 @@
 import React from "react";
 import { FaBars } from "react-icons/fa6";
+import { US } from 'country-flag-icons/react/3x2'; // United States
+
+
 
 const CategoryBar = () => {
   return (
@@ -32,7 +35,7 @@ const CategoryBar = () => {
             <div className="flex">
               <h4>Ship To</h4>
               <select name="" id="" className="outline-0">
-                <option value="">German</option>
+                <option value=""><US/></option>
               </select>
             </div>
           </div>
