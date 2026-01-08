@@ -4,6 +4,8 @@ import { IoGrid } from "react-icons/io5";
 import { FaAlignJustify, FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const GridViewProducts = () => {
   const [listview, setListView] = useState(false);
@@ -522,24 +524,26 @@ const GridViewProducts = () => {
             <div className="mx-2">
               <div className="w-full grid grid-cols-3 gap-6">
                 {gridProducts.map((gridProduct) => (
-                  <div key={gridProduct.id} className="border border-gray-300 bg-white rounded-lg p-4">
+                  <div
+                    key={gridProduct.id}
+                    className="border border-gray-300 bg-white rounded-lg p-4"
+                  >
                     <img
                       src={gridProduct.image}
                       alt={gridProduct.title}
                       className="w-full h-48 object-contain mb-4"
                     />
 
-                    
-
                     <div className="flex items-center mb-2 justify-between">
-                      <div className="flex gap-2"><span className="text-lg font-semibold">
-                        ${gridProduct.price}
-                      </span>
-                      <span className="text-sm line-through text-gray-400">
-                        ${gridProduct.oldPrice}
-                      </span></div>
-                      <FaRegHeart className="text-blue-500"/>
-                      
+                      <div className="flex gap-2">
+                        <span className="text-lg font-semibold">
+                          ${gridProduct.price}
+                        </span>
+                        <span className="text-sm line-through text-gray-400">
+                          ${gridProduct.oldPrice}
+                        </span>
+                      </div>
+                      <FaRegHeart className="text-blue-500" />
                     </div>
 
                     <div className="text-sm text-gray-600 flex items-center gap-3">
@@ -595,6 +599,30 @@ const GridViewProducts = () => {
             ))}
           </div>
         )}
+        <div className="mx-2 my-4 flex justify-end gap-6">
+          <div>
+            <select
+              name="sort"
+              id="sort"
+              className="px-2 py-1 border border-gray-300 rounded-md outline-0 bg-white"
+            >
+              <option value="default">Show 10</option>
+              <option value="price-low">Show 20</option>
+              <option value="price-high">Show all</option>
+            </select>
+          </div>
+          <div className="flex items-center text-normal bg-white rounded-md border border-gray-300 cursor-pointer">
+            <p  className="border-r border-gray-300 px-3 py-1" >
+              <MdKeyboardArrowLeft/>
+            </p>
+            <p className="border-r border-gray-300 px-3 py-1">1</p>
+            <p className="px-3 py-1">2</p>
+            <p className="border-l border-gray-300 px-3 py-1">3</p>
+            <p className="border-l border-gray-300 px-3 py-1">
+              <MdKeyboardArrowRight  />
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
