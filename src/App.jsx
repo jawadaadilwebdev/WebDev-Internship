@@ -13,6 +13,7 @@ import CopyRight from "./Components/CopyRight";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 import ProductsPage from "./Components/ProductsPage";
+import ProductDetail from "./Components/ProductDetail";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/productdetail" element={<ProductDetail />} />
       </Routes>
       <Subscribe />
       <FooterLinks />
