@@ -14,6 +14,7 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 import ProductsPage from "./Components/ProductsPage";
 import ProductDetail from "./Components/ProductDetail";
+import Cart from "./Components/Cart";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/productdetail" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Subscribe />
       <FooterLinks />
