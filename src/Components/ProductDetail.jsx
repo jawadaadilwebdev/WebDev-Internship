@@ -368,7 +368,7 @@ const ProductDetail = () => {
         {recommendedItems.map((item) => (
           <div key={item.id} className="flex items-start space-x-4">
             <img 
-              src={item.imageSrc} 
+              src={item.image} 
               alt={item.title}
               className="w-16 h-16 rounded object-cover shrink-0 border border-gray-200"
             />
